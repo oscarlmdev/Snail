@@ -34,7 +34,7 @@ public class Snail {
                 }
                 rBottom--;
 
-                // Column bottom to top
+            // Column bottom to top
             }
             if (cLeft <= cRight) {
                 for (int c = rBottom; c >= rTop; c--) {
