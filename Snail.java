@@ -15,27 +15,27 @@ public class Snail {
 
         while ((rTop <= rBottom) && (cLeft <= cRight)) {
 
-            // Row left to right
+            // Top row left to right
             for (int r = cLeft; r <= cRight; r++) {
                 result[i++] = array[rTop][r];
             }
             rTop++;
 
-            // Column top to bottom
+            // Right column top to bottom
             for (int c = rTop; c <= rBottom; c++) {
                 result[i++] = array[c][cRight];
             }
             cRight--;
 
-            // Row right to left
+            // Bottom row right to left
             if (rTop <= rBottom) {
                 for (int r = cRight; r >= cLeft; r--) {
                     result[i++] = array[rBottom][r];
                 }
                 rBottom--;
-
-            // Column bottom to top
             }
+            
+            // Left column bottom to top
             if (cLeft <= cRight) {
                 for (int c = rBottom; c >= rTop; c--) {
                     result[i++] = array[c][cLeft];
