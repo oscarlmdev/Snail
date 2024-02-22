@@ -4,14 +4,14 @@ public class Snail {
 
         // Case empty array
         if (array.length == 1) return array[0];
-
-        int[] result = new int[array.length * array.length];
+        int n = array.length;
+        int[] result = new int[n * n];
         int i = 0;
 
         int rTop = 0;
-        int rBottom = array.length - 1;
+        int rBottom = n - 1;
         int cLeft = 0;
-        int cRight = array.length - 1;
+        int cRight = n - 1;
 
         while ((rTop <= rBottom) && (cLeft <= cRight)) {
 
